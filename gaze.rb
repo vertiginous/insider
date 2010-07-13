@@ -121,7 +121,6 @@ __END__
 
 %h2 Here you will find all RMU Insider articles published
 
-%h2= title
 %ul
   - pages.each do |page|
     %li
