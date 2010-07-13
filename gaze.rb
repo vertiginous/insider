@@ -33,13 +33,12 @@ class Gaze < Sinatra::Base
     def pages
       files = Dir.glob "public/*"
       formats = [".md", ".markdown", ".textile"]
-      pages   = []
       
-      files.each do |file|
-        pages << file if formats.member? File.extname(file)
+      pages = files.map do |file|
+        File.basename(file) if formats.member? File.extname(file)
       end
       
-      pages.map {|file| File.basename file }
+      pages.compact
     end
     
     def read(filename)
