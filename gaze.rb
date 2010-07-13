@@ -27,7 +27,7 @@ class Gaze < Sinatra::Base
 
   helpers do
     def title
-      "API docs"
+      "Archives"
     end
 
     def pages
@@ -124,13 +124,13 @@ __END__
 %ul
   - pages.each do |page|
     %li
-      %a{:href => "/pages/#{page}"}= page
+      %a{:href => "/pages/#{page}"}= File.basename(page, '.*')
 
 @@page
 %strong
   %a{:href => '/pages/'}= title
 - pages.each do |page|
-  %a{:href => "/pages/#{page}"}= page
+  %a{:href => "/pages/#{page}"}= File.basename(page, '.*')
 %hr
 ~ @output
 
