@@ -117,11 +117,11 @@ __END__
       %a{:href => 'http://github.com/ichverstehe/gaze'} gaze
 
 @@pages
-%h1 The Four W
-%h2 Why
-%h2 When
-%h2 Who
-%h1= title
+%h1 Welcome to RMU Insider
+
+%h2 Here you will find all RMU Insider articles published
+
+%h2= title
 %ul
   - pages.each do |page|
     %li
